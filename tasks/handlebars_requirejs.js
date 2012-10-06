@@ -46,7 +46,6 @@ module.exports = function(grunt) {
     output += "var template = Handlebars.template;" +
     "var templates = Handlebars.templates = Handlebars.templates || {}; \n";
     // iterate files, processing partials and templates separately
-    console.log('tata');
     this.files.forEach(function(files) {
       srcFiles = grunt.file.expandFiles(files.src);
       srcFiles.forEach(function(file) {
@@ -68,7 +67,7 @@ module.exports = function(grunt) {
     });
     output += "});\n";
 
-    outputFilename =  'app/scripts/templates.js';
+    outputFilename = options.output || 'temp/scripts/templates.js';
     grunt.file.write(outputFilename, output);
     grunt.log.writeln('File "' + outputFilename + '" created.');
   });
