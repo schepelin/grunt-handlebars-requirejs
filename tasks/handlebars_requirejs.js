@@ -11,7 +11,6 @@ module.exports = function(grunt) {
 
   // TODO: ditch this when grunt v0.4 is released
   grunt.util = grunt.util || grunt.utils
-  grunt.log.error('error');
   var _ = grunt.util._
   var helpers = require('grunt-contrib-lib').init(grunt);
 
@@ -53,7 +52,6 @@ module.exports = function(grunt) {
 
         try {
           compiled = require('handlebars').precompile(src);
-          //compiled = 'Handlebars.template('+compiled+')'; // Forcing wrap since we'll need it in the module
         } catch (e) {
           grunt.log.error(e);
           grunt.fail.warn('Handlebars failed to compile '+file+'.');
