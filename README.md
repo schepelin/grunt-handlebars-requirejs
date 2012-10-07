@@ -1,4 +1,4 @@
 grunt-handlebars-requirejs
 ==========================
 
-Compiles handlebars templates into requirejs modules.
+Compiles handlebars templates into one requirejs module.
