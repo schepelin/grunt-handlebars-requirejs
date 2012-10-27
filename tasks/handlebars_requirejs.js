@@ -40,7 +40,6 @@ module.exports = function(grunt) {
 
     // assign filename transformation functions
     var processName = options.processName || defaultProcessName
-    var processPartialName = options.processPartialName || defaultProcessPartialName
     var output = "define(['handlebars'], function(Handlebars){\n"
     output += "var template = Handlebars.template;" +
     "var templates = Handlebars.templates = Handlebars.templates || {}; \n";
