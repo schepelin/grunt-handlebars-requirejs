@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     return name.substr(1, name.length);                       // strips leading _ character
   };
 
-  grunt.registerMultiTask('handlebars_requirejs', 'Compile Handlebars templates to RequireJS modules.', function() {
+  grunt.registerMultiTask('handlebars_requirejs', 'Compile Handlebars templates to RequireJS module.', function() {
 
     var options = helpers.options(this, {namespace: 'JST'});
 
